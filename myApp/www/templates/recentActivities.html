@@ -1,9 +1,23 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Activities">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
-    </ion-list>
+
+    <div class="row list" ng-repeat="activity in recentActivitiesList">
+        <div class="col">
+            <a class="item item-avatar" href="#/app/playlists/{{activity.id}}">
+                <img src="cover.jpg">
+                <div class="row">
+                    <div class="col-80">
+                        <h2>{{activity.name}}</h2>
+                        <p>{{activity.date | date:shotDate}}</p>
+                    </div>
+                    <div class="col-20">
+                        <p><span ng-class="{given:activity.isGiven,taken:activity.isTaken}">{{activity.money}}</span></p>
+                   </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
   </ion-content>
 </ion-view>

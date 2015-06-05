@@ -41,15 +41,17 @@ angular.module('moneySpyApp.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('RecentActivityCtrl', function($scope) {
+
+  $scope.recentActivitiesList = [
+    { name: 'Rahool', id: 1, money: 2000, isGiven:true, isTaken:false, profileImage:"",date:1433487927000},
+    { name: 'Nik', id: 2, money: 199, isGiven:false, isTaken:true, profileImage:"", date:1433487927000},
+    { name: 'Vinay', id: 3, money: 522, isGiven:true, isTaken:false, profileImage:"", date:1433487927000},
+    { name: 'Sanyam', id: 4, money: 954, isGiven:true, isTaken:false, profileImage:"", date:1433487927000},
+    { name: 'Ashu', id: 5, money: 8000, isGiven:false, isTaken:true, profileImage:"", date:1433487927000},
+    { name: 'Akshay', id: 6, money: 1540, isGiven:false, isTaken:true, profileImage:"", date:1433487927000}
   ];
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

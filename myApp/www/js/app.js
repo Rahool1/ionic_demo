@@ -52,7 +52,7 @@ angular.module('moneySpyApp', ['ionic', 'moneySpyApp.controllers'])
       views: {
         'menuContent': {
           templateUrl: "templates/recentActivities.html",
-          controller: 'PlaylistsCtrl'
+          controller: 'RecentActivityCtrl'
         }
       }
   })
@@ -65,7 +65,17 @@ angular.module('moneySpyApp', ['ionic', 'moneySpyApp.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
+  })
+
+  .state('app.expense', {
+    url: "/expense",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/expenses.html"
+      }
+    }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/recent_activities');
 });
